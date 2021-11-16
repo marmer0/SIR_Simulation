@@ -3,8 +3,9 @@
 
 
 #Visualizing an SIR MODEL
-
+#keep in mind this SIR model does not track different individuals in the population, only calculates the sums of what S I Rs in th population
 ## intial states
+
 state <- list()
 N <- 1000
 state$S <- N
