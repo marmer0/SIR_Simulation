@@ -15,8 +15,8 @@ state$R <- 0
 
 i <-  1
 
-alpha <- 0.01 ##rate of infectivity - this rate is an average rate
-beta <- 0.05 ##rate of recovery
+alpha <- 0.0001 ##rate of infectivity - this rate is an average rate
+beta <- 0.01 ##rate of recovery
 
 
 while (state$R[i] < N) {

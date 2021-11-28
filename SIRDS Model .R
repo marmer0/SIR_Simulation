@@ -4,7 +4,7 @@
 #and provide you with population metrics at IQR time points 
 #I ran this for 2 years with a common alpha rate over 100 subjects 
 
-alpha <- 0.02 ##rate of infectiousness
+alpha <- 0.01 ##rate of infectiousness
 
 mat <- matrix(NA, nrow = 100, ncol = 730)
 mat[, 1] <- c(rep("S", 99), "I")
@@ -22,7 +22,7 @@ for (t in 1:729) {
       It <-  sum(mat[i, 1:(t - 1)] == "I")
       
       pR <-
-        pbeta(It / 14, 1, 1)  #prob of being recovered after # days
+        pbeta(It / 22, 1, 1)  #prob of being recovered after # days
       bR <- rbinom(1, 1, pR) #prob that you will recover
       mat[i, t + 1] <- ifelse(bR == 1, "R", "I")
       
@@ -60,14 +60,14 @@ for (t in 1:729) {
 
 
 ##at half a year
-a<- (sum(mat[, 180] == "S") / 100) * 100
-b <- (sum(mat[, 180] == "I") / 100) * 100
+(sum(mat[, 180] == "S") / 100) * 100
+ (sum(mat[, 180] == "I") / 100) * 100
 (sum(mat[, 180] == "R") / 100) * 100
 (sum(mat[, 180] == "D") / 100) * 100
 
 ##at a year
-c <- (sum(mat[, 365] == "S") / 100) * 100
-d <- (sum(mat[, 365] == "I") / 100) * 100
+ (sum(mat[, 365] == "S") / 100) * 100
+(sum(mat[, 365] == "I") / 100) * 100
 (sum(mat[, 365] == "R") / 100) * 100
 (sum(mat[, 365] == "D") / 100) * 100
 
