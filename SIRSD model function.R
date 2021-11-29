@@ -90,15 +90,71 @@ SIRSD <- function(alpha, N, days, avg_days_sick, immunity_length) {
 }
 
 
+###RUNNING SIMULATION 
 
-##Running simultions 
+sim_SIRDS <- function(nsim, SIRmodel){ #plug in the number of simulations and 
 
-(sim1 <-  SIRSD(0.05, 100, 365, 10, 90))
+S.q1 <- c()
+S.q2 <- c()
+S.q3 <- c()
+S.q4 <- c()
 
-nsim <- 10
-sims <- replicate(nsim,SIRSD(0.001, 1000, 365, 10, 90))
+I.q1 <- c()
+I.q2 <- c()
+I.q3 <- c()
+I.q4 <- c()
+
+R.q1 <- c()
+R.q2 <- c()
+R.q3 <- c()
+R.q4 <- c()
+
+D.q1 <- c()
+D.q2 <- c()
+D.q3 <- c()
+D.q4 <- c()
 
 
+for(i in 1:nsim){
+  sim <- as.data.frame( SIRmodel)
+  S.q1[i] <- sim[1,1]
+  S.q2[i] <- sim[1,2] 
+  S.q3[i] <- sim[1,3]
+  S.q4[i] <- sim[1,2] 
+  
+  I.q1[i] <- sim[2,1]
+  I.q2[i] <- sim[2,2] 
+  I.q3[i] <- sim[2,3]
+  I.q4[i] <- sim[2,2] 
+  
+  R.q1[i] <- sim[3,1]
+  R.q2[i] <- sim[3,2] 
+  R.q3[i] <- sim[3,3]
+  R.q4[i] <- sim[3,2] 
+  
+  D.q1[i] <- sim[4,1]
+  D.q2[i] <- sim[4,2] 
+  D.q3[i] <- sim[4,3]
+  D.q4[i] <- sim[4,2] 
+}
+
+
+sim_metrics <- rbind(
+S = cbind(SQ1 = mean(S.q1), SQ2 = mean(S.q2), SQ3 = mean(S.q3), SQ4 = mean(S.q4)),
+I  = cbind(IQ1 = mean(I.q1), IQ2 = mean(I.q2), IQ3 = mean(I.q3), IQ4 = mean(I.q4)),
+R = cbind(RQ1 = mean(R.q1), RQ2 = mean(R.q2), RQ3 = mean(R.q3), RQ4 = mean(R.q4)),
+D = cbind(DQ1 = mean(D.q1), DQ2 = mean(D.q2), DQ3 = mean(D.q3), DQ4 = mean(D.q4))
+)
+dimnames(sim_metrics) <- list(c("S", "I", "R", "D"), c("FirstQuarter","Halfway","ThirdQuarter","Final"))
+
+return(sim_metrics)
+}
+
+start <- Sys.time()
+sim_mets.001 <- sim_SIRDS(100000, SIRSD(0.001, 10000, 365, 10, 90))
+end <- Sys.time()
+end - start
+sim_mets
 
 
 
