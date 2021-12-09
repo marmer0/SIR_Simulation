@@ -151,13 +151,16 @@ return(sim_metrics)
 }
 
 start <- Sys.time()
-sim_mets.001 <- sim_SIRDS(100000, SIRSD(0.001, 10000, 365, 10, 90))
+sim_mets.001 <- sim_SIRDS(10000, SIRSD(0.001, 10000, 365, 10, 90))
 end <- Sys.time()
 end - start
 sim_mets
 
+sim_mets.0001 <- sim_SIRDS(1000, SIRSD(0.0001, 1000, 25, 10, 90))
 
+sim_mets.01 <- sim_SIRDS(1000, SIRSD(0.01, 1000, 25, 10, 90))
 
+sim_mets.1 <- sim_SIRDS(1000, SIRSD(0.1, 1000, 25, 10, 90))
 
 
 
