@@ -94,25 +94,25 @@ SIRSD <- function(alpha, N, days, avg_days_sick, immunity_length) {
 
 sim_SIRDS <- function(nsim, SIRmodel){ #plug in the number of simulations and 
 
-S.q1 <- c()
-S.q2 <- c()
-S.q3 <- c()
-S.q4 <- c()
-
-I.q1 <- c()
-I.q2 <- c()
-I.q3 <- c()
-I.q4 <- c()
-
-R.q1 <- c()
-R.q2 <- c()
-R.q3 <- c()
-R.q4 <- c()
-
-D.q1 <- c()
-D.q2 <- c()
-D.q3 <- c()
-D.q4 <- c()
+  S.q1 <- rep(NA, nsim)
+  S.q2 <-rep(NA, nsim)
+  S.q3 <- rep(NA, nsim)
+  S.q4 <- rep(NA, nsim)
+  
+  I.q1 <- rep(NA, nsim)
+  I.q2 <-rep(NA, nsim)
+  I.q3 <- rep(NA, nsim)
+  I.q4 <- rep(NA, nsim)
+  
+  R.q1 <- rep(NA, nsim)
+  R.q2 <- rep(NA, nsim)
+  R.q3 <-rep(NA, nsim)
+  R.q4 <- rep(NA, nsim)
+  
+  D.q1 <- rep(NA, nsim)
+  D.q2 <- rep(NA, nsim)
+  D.q3 <- rep(NA, nsim)
+  D.q4 <- rep(NA, nsim)
 
 
 for(i in 1:nsim){
