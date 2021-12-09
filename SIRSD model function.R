@@ -163,23 +163,37 @@ sim_mets.01 <- sim_SIRDS(1000, SIRSD(0.01, 1000, 90, 10, 90))
 sim_mets.1 <- sim_SIRDS(1000, SIRSD(0.1, 1000, 90, 10, 90))
 
 
+sim_mets.001.15 <- sim_SIRDS(10000, SIRSD(0.001, 10000, 365, 15, 90)) #low infection, low recovery
+sim_mets.001.15.half <- sim_SIRDS(10000, SIRSD(0.001, 10000, 180, 15, 90)) #low infection, low recovery #half year
+sim_mets.001.15.quarter <- sim_SIRDS(10000, SIRSD(0.001, 10000, 90, 15, 90)) #low infection, low recovery #quarter year
+sim_mets.001.15.8th <- sim_SIRDS(10000, SIRSD(0.001, 10000, 45, 15, 90)) #low infection, low recovery #eight year
+sim_mets.001.15.16th<- sim_SIRDS(10000, SIRSD(0.001, 10000, 23, 15, 90)) #low infection, low recovery #16th year
 
-sim_mets.001.15 <- sim_SIRDS(1000, SIRSD(0.001, 1000, 365, 15, 90)) #low infection, low recovery
-sim_mets.001.15.half <- sim_SIRDS(100, SIRSD(0.001, 1000, 180, 15, 90)) #low infection, low recovery #half year
-sim_mets.001.15.quarter <- sim_SIRDS(100, SIRSD(0.001, 1000, 90, 15, 90)) #low infection, low recovery #quarter year
 
-sim_mets.01.5 <- sim_SIRDS(1000, SIRSD(0.01, 1000, 365, 5, 90)) #high infection high recovery 
-sim_mets.01.5.half <- sim_SIRDS(1000, SIRSD(0.01, 1000, 180, 5, 90)) #high infection high recovery #half year
-sim_mets.01.5.quarter <- sim_SIRDS(1000, SIRSD(0.01, 1000, 90, 5, 90)) #high infection high recovery #quarter year
 
-sim_mets.01.15 <- sim_SIRDS(1000, SIRSD(0.01, 1000, 365, 15, 90)) #high infection low recovery 
-sim_mets.01.15.half <- sim_SIRDS(1000, SIRSD(0.01, 1000, 180, 15, 90)) #high infection low recovery #half year
-sim_mets.01.15.quarter <- sim_SIRDS(1000, SIRSD(0.01, 1000, 90, 15, 90)) #high infection low recovery #quarter year
 
-sim_mets.001.5 <- sim_SIRDS(1000, SIRSD(0.001, 1000, 365, 5, 90)) #low infection, high recovery
-sim_mets.001.5.half <- sim_SIRDS(1000, SIRSD(0.001, 1000, 180, 5, 90)) #low infection, high recovery #half year
-sim_mets.001.5.quarter <- sim_SIRDS(1000, SIRSD(0.001, 1000, 90, 5, 90)) #low infection, high recovery #quarter year
+sim_mets.01.5 <- sim_SIRDS(10000, SIRSD(0.01, 10000, 365, 5, 90)) #high infection high recovery 
+sim_mets.01.5.half <- sim_SIRDS(10000, SIRSD(0.01, 10000, 180, 5, 90)) #high infection high recovery #half year
+sim_mets.01.5.quarter <- sim_SIRDS(10000, SIRSD(0.01, 10000, 90, 5, 90)) #high infection high recovery #quarter year
+sim_mets.01.5.8th <- sim_SIRDS(10000, SIRSD(0.01, 10000, 45, 5, 90)) #high infection high recovery #eigth year
+sim_mets.01.5.16th <- sim_SIRDS(10000, SIRSD(0.01, 10000, 23, 5, 90)) #high infection high recovery #16th year
 
+
+
+
+sim_mets.01.15 <- sim_SIRDS(10000, SIRSD(0.01, 10000, 365, 15, 90)) #high infection low recovery 
+sim_mets.01.15.half <- sim_SIRDS(10000, SIRSD(0.01, 10000, 180, 15, 90)) #high infection low recovery #half year
+sim_mets.01.15.quarter <- sim_SIRDS(10000, SIRSD(0.01, 10000, 90, 15, 90)) #high infection low recovery #quarter year
+sim_mets.01.15.8th <- sim_SIRDS(10000, SIRSD(0.01, 10000, 45, 15, 90)) #high infection low recovery #eight year
+sim_mets.01.15.16th <- sim_SIRDS(10000, SIRSD(0.01, 10000, 23, 15, 90)) #high infection low recovery #16th year
+
+
+
+sim_mets.001.5 <- sim_SIRDS(10000, SIRSD(0.001, 10000, 365, 5, 90)) #low infection, high recovery
+sim_mets.001.5.half <- sim_SIRDS(10000, SIRSD(0.001, 10000, 180, 5, 90)) #low infection, high recovery #half year
+sim_mets.001.5.quarter <- sim_SIRDS(10000, SIRSD(0.001, 10000, 90, 5, 90)) #low infection, high recovery #quarter year
+sim_mets.001.5.8th <- sim_SIRDS(10000, SIRSD(0.001, 10000, 45, 5, 90)) #low infection, high recovery #eight year
+sim_mets.001.5.16th <- sim_SIRDS(10000, SIRSD(0.001, 10000, 23, 5, 90)) #low infection, high recovery #16th year 
 
 
 
